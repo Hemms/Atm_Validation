@@ -1,0 +1,5 @@
+pyfingerprint==1.6.0     # For interacting with the fingerprint sensor
+bcrypt==3.2.0            # For hashing and verifying PINs securely
+cryptography==3.4.7      # Alternative to bcrypt, for encryption
+PyQt5==5.15.4            # Or Tkinter if you are using PyQt for the UI
+sqlite3==2.6.0           # SQLite database (comes pre-installed with Python, so optional)
