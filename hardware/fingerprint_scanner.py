@@ -1,6 +1,6 @@
 from pyfingerprint.pyfingerprint import PyFingerprint
 
-def capture_fingerprint():
+def capture_fingerprint():python
     f = PyFingerprint('/dev/ttyUSB0', 57600, 0xFFFFFFFF, 0x00000000)
     if f.verifyPassword() == False:
         raise ValueError('Fingerprint sensor password is incorrect!')

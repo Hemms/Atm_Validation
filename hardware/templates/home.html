@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM Validation - Home</title>
+    
+    <style>
+        /* Basic reset to avoid browser defaults */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #e8f5e9; /* Light green background */
+            color: #ffffff; /* White color for text */
+        }
+
+        .container {
+            text-align: center;
+            background-color: #0000ff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        header h2 {
+            font-size: 1.5em;
+            font-weight: normal;
+            margin-bottom: 20px;
+            color: #ffffff; /* White color for ATM VALIDATION */
+        }
+
+        .atm-icon {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            margin: 0 auto 20px auto; /* Center the icon horizontally */
+            background-color: #800080; /* Purple background */
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Chip image styling */
+        .chip {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 50px;
+            height: auto;
+        }
+
+        /* Cardholder name styling under the chip */
+        .card-holder {
+            position: absolute;
+            bottom: 20px;
+            left: 20px; /* Align with the chip on the left */
+            font-size: 14px;
+            color: #ffffff;
+            text-transform: uppercase; /* Make it appear in all caps */
+        }
+
+        /* Visa logo styling */
+        .visa {
+            position: absolute;
+            top: 20px;
+            right: 20px; /* Position the visa logo on the top right */
+            width: 80px;
+            height: auto;
+        }
+
+        /* Expires MM/YY text styling */
+        .expires {
+            position: absolute;
+            bottom: 40px; /* Positioned below the visa logo */
+            right: 20px; /* Align with the visa logo on the right */
+            font-size: 14px;
+            color: #ffffff;
+        }
+
+        /* Login button styling */
+        a.button {
+            display: inline-block;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #43a047; /* Green color for buttons */
+            padding: 10px 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        a.button:hover {
+            background-color: #2e7d32; /* Darker green on hover */
+        }
+
+        /* Footer section with registration message */
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #ffffff; /* Ensure text is white */
+        }
+
+        .footer p {
+            margin-bottom: 10px; /* Spacing between text and button */
+        }
+
+        .footer a.button {
+            background-color: #1e88e5; /* Blue color for the Register button */
+        }
+
+        .footer a.button:hover {
+            background-color: #1565c0; /* Darker blue on hover */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome</h1>
+            <h2>ATM VALIDATION</h2>
+        </header>
+        
+        <div class="atm-icon">
+            <img src="chip.png" alt="Chip" class="chip">
+            <div class="card-holder">Card Holder<br>FULL NAME</div>
+            <img src="visa.png" alt="Visa" class="visa">
+            <div class="expires">Expires MM/YY</div>
+        </div>
+
+        <div>
+            <a href="{{ url_for('login') }}" class="button">Login</a>
+        </div>
+
+        <!-- Footer section with registration message -->
+        <div class="footer">
+            <p>Don't have an account?</p>
+            <a href="{{ url_for('register') }}" class="button">Register</a>
+        </div>
+    </div>
+</body>
+</html>
